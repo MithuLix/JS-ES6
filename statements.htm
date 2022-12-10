@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>statement</title>
+    <style>
+        .con{
+            width: 300px; height: 100vh; border-radius: 10px;  
+            margin: 0 auto; margin-top: 5%; border: 2px solid yellow; 
+            padding: 20px; text-align: center; font-family: open sans;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+            <h2>Javascript Statement</h2>
+                <p>A <b>Js program</b> Lorem ipsum dolor sit amet   consectetur adipisicing elit. Saepe, natus.</p>
+            <p id="demo"></p>
+
+    <script>
+
+        var x,x1,x3;
+        x = 5; x1 = 456; x3 = 3254; e = x + x1 + x3;
+        document.getElementById("demo").innerHTML = e;
+        document.write("<h2>mohaiminul islam</h2>"); 
+        document.write("<h4>mamun-or-rashid</h4>");
+        // alert("how are u?");
+
+
+        // break & continue statement
+        for(var a = 1; a <= 5; a++){
+            if(a == 3){
+            document.write("Hey: " + a + "<br>");
+            continue;
+            }
+            document.write("Number: " + a + "<br>");
+        }
+        
+        //for loop
+        for(var a = 1; a <= 5; a++){
+            document.write("mithu<br>");
+        }
+
+
+        //Debugger
+        star();
+        function star(){
+            var NumofCol = 5;
+            debugger;
+            for(var i = 1; i<= NumofCol; i++) {
+                document.write('*');
+            }
+        }
+
+        var a ="abc"
+        var b ="ABC"
+        console.log(a > b)
+        
+
+
+    </script>
+    </div>
+    
+
+</body>
+</html>

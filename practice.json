@@ -1,0 +1,22 @@
+[{
+   "name": "mohaiminul islam",
+   "email": "erougina@gamil.com",
+   "links": [
+       {"facebook": "https//:facebook.com/"},
+       {"Twitter": "https//:www.twitter.com/"},
+       {"Linkdin": "https//:www.linekdin.com/"}
+   ],
+   "skills": ["java", "kotlinn", "Python", "php", "node js"] 
+
+},
+{
+"name": "mohaiminul islam",
+"email": "erougina@gamil.com",
+"links": [
+    {"facebook": "https//:facebook.com/"},
+    {"Twitter": "https//:www.twitter.com/"},
+    {"Linkdin": "https//:www.linekdin.com/"}
+],
+"skills": ["java", "kotlinn", "Python", "php", "node js"] 
+
+}]

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="javascript.ico" type="image/x-icon">
+    <title>String</title>
+    <style>
+
+        *{ box-sizing: border-box; margin: 0 auto; }
+
+        .div1   {
+            width: 95%; height: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;     
+            margin: 10px; padding: 10px; line-height: 30px; font-size: 15px; margin-left: auto;
+            margin-right: auto;
+        }
+  
+        .example   {
+            background-color: rgb(238, 238, 238); padding: 10px 10px 10px 30px; border-left: 5px solid rgb(255, 153, 0);
+            margin: 10px 0px 30px 30px; color: rgb(0, 110, 255); 
+        }
+
+        table  {
+            text-align: left; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse;  box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7);
+            margin: 10px 30px 60px 0px; 
+        }
+
+        .highlights{ width: 100%; height: auto; background-color:rgb(199, 131, 4);padding:10px;}
+
+        #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11 {
+            margin-left: 0px; padding-left: 10px;}
+
+        tr, th, td  {padding: 3px 15px 3px 15px; }
+
+        th  {background-color: rgb(255, 255, 255);}
+
+        tr{background-color: rgb(223, 223, 223);}
+
+        tr:nth-child(even){background-color: rgb(238, 238, 238);}
+
+        h2  {
+            text-align: center; background-color: rgb(255, 255, 255); width: 100%; border-collapse: collapse; padding: 3px;
+            box-shadow: 0 1px 10px rgba(124, 124, 124, 0.7); 
+        }
+
+        h2, h3{margin-bottom: 10px; font-weight: 400;}
+
+        button {width: 100px; height: 25px; background-color: rgb(255, 166, 1);
+            border: none; border-radius: 5px; box-shadow: 0 2px 15px rgba(172, 172, 172, 0.7); }
+   
+
+    </style>
+</head>
+    <body>
+        <div class="div1">
+                    <h2>JavaScript String</h2>
+                    <p>JavaScript string are used for sorting & manipulating text. A js string is zero or more characters written inside quotes.</p><br>
+
+                    <p><strong>Example</strong></p>
+                <div class="example">
+                    <p id="demo"></p>
+                    <script>
+                        var x = "Jhon doe"; 
+                        document.getElementById("demo").innerHTML = x;
+                    </script>
+                </div><br>
+
+                    <h2>Escape characters</h2>
+                    <p>Because String must be written withion quotes, Javascript will misunderstand the string:</p>
+                <div class="example">
+                    var x = "We are so-called"Vikings" from the north"; 
+                </div>
+                    <p>The string will be chopped to "We are so-called"</p>
+                    <p>The solution to avoid this problem, is to use the <strong>backslash escape character.</strong></p>
+                    <p>The backslash ( <span style="color: red;">\</span> ) escape character turns special characters into string characters:</p>                
+            
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Result</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>\'</td>
+                            <td>'</td>
+                            <td>Single quote</td>
+                        </tr>
+                        <tr>
+                            <td>\"</td>
+                            <td>"</td>
+                            <td>Double quote</td>
+                        </tr>
+                        <tr>
+                            <td>\\</td>
+                            <td>\</td>
+                            <td>Backslash</td>
+                        </tr>
+                    </table>
+                
+                    <p><strong>Example</strong></p>
+                    <p>The escape sequence ( <span style="color: red;">\',  \",  \\</span> ) inserts a single, double, backslash quote in a string.</p>
+
+                <div class="example">
+                        <p id="demo1"></p>
+                        <p id="demo2"></p>
+                        <p id="demo3"></p>
+
+                        <script>
+                            var x = "We are so called \'Vikings\' from the North.";
+                            var y = "We are so called \"Vikings\" from the North.";
+                            var z = "We are so called \\Vikings from the North.";
+
+                            document.getElementById("demo1").innerHTML = x;
+                            document.getElementById("demo2").innerHTML = y;
+                            document.getElementById("demo3").innerHTML = z;
+                        </script>
+
+                </div>
+                            <p>Six other escape sequences are valid in Javascript:</p>
+                        <table>
+                            <tr><th>Code</th>
+                                <th>result</th>
+                             </tr>
+                             <tr>
+                                 <td>\b</td>
+                                 <td>Backspace</td>
+                             </tr>
+                             <tr>
+                                <td>\f</td>
+                                <td>From Feed</td>
+                            </tr>
+                            <tr>
+                                <td>\n</td>
+                                <td>NewLine</td>
+                            </tr>
+                            <tr>
+                                <td>\r</td>
+                                <td>Carriage return</td>
+                            </tr>
+                            <tr>
+                                <td>\t</td>
+                                <td>Horizontal Tabular</td>
+                            </tr>
+                            <tr>
+                                <td>\v</td>
+                                <td>Vertical Tabular</td>
+                            </tr>
+
+                        </table>
+                        
+                            <p class="highlights">The 6 characters avobe were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.</p><br><br><br>
+
+
+
+
+                        <!-- String Methods -->
+
+                            <h2>JavaScript String Methods</h2>
+                            <p>String method help you to work with string </p><br>
+
+                            <p><strong>Example</strong></p>
+                        <div class="example">
+                            <p id="demo4"></p>
+                            <p id="demo5"></p>
+                            <p id="demo6"></p>
+                            <p id="demo7"></p>
+                            <p id="demo8"></p>
+                            <p id="demo9"></p>
+                            <p id="demo10"></p>
+                            <p id="demo11"></p>
+                            <p id="demo12"></p>
+                            <p id="demo13"></p>
+                            <p id="demo14"></p>
+                            <p id="demo15"></p>
+                            <p id="demo16"></p>
+                            
+
+                            <script>
+                                var str = "please locate where the 'locate' occurs!";
+                                var str1 = 73;
+                                var pos = str.indexOf("locate");
+                                var pos2 = str.search("where");
+                                var pos3 = str.toUpperCase("");
+                                var pos4 = str.includes("the");
+                                var pos5 = str.length;
+                                var pos6 = str.slice(7,13);
+                                var pos7 = str.replace(/locate/g, "Find");
+                                var pos8 = str.charAt(9);
+                                var pos9 = str.charCodeAt(4);
+                                var pos10 = String.fromCharCode(74);
+                                var pos11 = str.split(" ");
+                                var pos12 = str.repeat(2);
+                                var pos13 = str1.toString(26);
+
+
+
+
+                                document.getElementById("demo4").innerHTML = pos + " <span style=color:white;>(indexOf)</span>";
+                                document.getElementById("demo5").innerHTML = pos2 + " <span style=color:white;>(search)</span>";
+                                document.getElementById("demo6").innerHTML = pos3 + " <span style=color:white;>(toUpperCase)</span>";
+                                document.getElementById("demo7").innerHTML = pos4 + " <span style=color:white;>(includes)</span>";
+                                document.getElementById("demo8").innerHTML = pos5 + " <span style=color:white;>(length)</span>";
+                                document.getElementById("demo9").innerHTML = pos6 + " <span style=color:white;>(slice)</span>";
+                                document.getElementById("demo10").innerHTML = pos7 + " <span style=color:white;>(replace)</span>";
+                                document.getElementById("demo11").innerHTML = pos8 + " <span style=color:white;>(charAt)</span>";
+                                document.getElementById("demo12").innerHTML = pos9 + " <span style=color:white;>(charCodeAt)</span>";
+                                document.getElementById("demo13").innerHTML = pos10 + " <span style=color:white;>(fromCharCode)</span>";
+                                document.getElementById("demo14").innerHTML = pos11 + " <span style=color:white;>(split)</span>";
+                                document.getElementById("demo15").innerHTML = pos12 + " <span style=color:white;>(repeat)</span>";
+                                document.getElementById("demo16").innerHTML = pos13 + " <span style=color:white;>(toString)</span>";
+
+
+                            </script>
+                            
+                        </div>
+
+
+                                <h2>Did you notice ?</h2>
+                                <p>The two methods, indexOf() and search(), are equal?</p>
+                                <p>The two methods are NOT equal. These are the differences:</p>
+                                <ul>
+                                    <li>The search() method cannot take a second start position argument.</li>
+                                    <li>The indexOf() method cannot take powerful search values (regular expressions).</li>
+                                </ul>
+                                <p>You will learn more about regular expressions in a later chapter.</p><br>
+               
+                            <h2>Converting string to an Array</h2>
+                            <p>A string can be converted to an array with the <span style="color: red;">split()</span> method:</p>
+
+        </div>
+    </body>
+</html>

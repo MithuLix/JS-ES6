@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        
+        .loading {
+            background: linear-gradient(90deg,  #eeeeee 30%, #f8f7f7 50%, #ececec 70%);
+            background-size: 300%; 
+            border-radius: .2rem;
+            animation: loading 1.2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        p{
+            padding: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Example loading animation</h3>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+    <p class="loading"></p>
+</body>
+</html>
